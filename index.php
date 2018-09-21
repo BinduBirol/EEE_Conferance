@@ -13,19 +13,19 @@
     <link rel="stylesheet" type="text/css" href="pages/css/custom.css"/>
 </head>
 
-<body>
+<body class="text-justify">
 
 <div>
     <?php
     include "pages/info.php"
     ?>
 </div>
-<div >
+<div class="text-center" >
     <a href="RegistrationForm.php">
-        <button class="btn btn-primary pull-center" >Apply Now</button>
+        <button style="width: 300px;" class="btn btn-primary" >Apply Now</button>
     </a>
 </div>
-
+<br/>
 </body>
 </html>
 

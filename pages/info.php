@@ -1,13 +1,11 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
-</head>
+
 
 <div class="">
     <p class="subheading pull-left">
     <h3>Registration Fees</h3></p>
     <br/>
     <table class="table table-bordered table-hover">
-        <tr>
+        <tr style="background-color: #fdebd0 ">
             <th>Category</th>
             <th>Fee*(General)</th>
             <th>Fee*(With IEEE Membership)</th>
@@ -49,8 +47,8 @@
 </div>
 <br/>
 <div class="alert alert-info">
-    <b>* Local participants can deposit Registration Fees in BDT (amount shown is without bank charge).
-    This payment may be made directly to the ‘ICECE’s bank account (4404033008616) with Sonali Bank Limited,
+    * Local participants can deposit Registration Fees in BDT (amount shown is without bank charge).
+    This payment may be made directly to the <b>‘ICECE’</b>s bank account (<b>4404033008616</b>) with Sonali Bank Limited,
     BUET Branch, Dhaka (in all the acceptable formats of the bank, namely cash deposit, any branch electronic deposit,
     DD, TT, PO, etc.). For detail, please see below the ‘Offline Mode of Payment’ under ‘Mode of Payment’ sub-title.
     </b>
@@ -95,7 +93,7 @@
     <h3>Mode of Payment</h3></p>
     <p class="subheading"><h4>Online Mode of Payment (using the ‘APPLY NOW’ button):</h4></p>
     <p> Debit/Credit Cards, Mobile Banking, e-Fund Transfer (for local and international)</p>
-    <ul>
+    <ul >
         <li>VISA</li>
         <li>MasterCard</li>
         <li>American Express</li>
@@ -105,7 +103,7 @@
         <li>bKash</li>
         <li>Rocket</li>
         <li>My Cash</li>
-        <li>& many more conventional and e-banking channels (please see the icons below)
+        <li>& many more conventional and e-banking channels (please see the icons below)<br/>
             <img class="image" src="images\payWith.png"></img>
         </li>
     </ul>
@@ -126,17 +124,17 @@
     </ul>
     <p class=""><b>For offline payment, the registration fee MUST be paid to the following Bank Account:</b></p>
     <p class="alert">
-        Name of the Account: ICECE<br/>
-        Bank Account or IBAN #: 4404033008616<br/>
-        Bank ABA Number: 200270522<br/>
-        SWIFT Code: BSONBDDHWEB<br/>
+        Name of the Account: <b>ICECE</b><br/>
+        Bank Account or IBAN #: <b>4404033008616</b><br/>
+        Bank ABA Number: <b>200270522</b><br/>
+        SWIFT Code: <b>BSONBDDHWEB</b><br/>
         <br/>
-        Name of the Bank: Sonali Bank Limited<br/>
-        Name of the Branch/Address: BUET Branch, Palashi<br/>
-        City: Dhaka<br/>
-        Country: BANGLADESH<br/>
-        Bank Email: brbuet@sonalibank.com.bd<br/>
-        Bank Phone: 880-2-9660514<br/>
+        Name of the Bank: <b>Sonali Bank Limited</b><br/>
+        Name of the Branch/Address: <b>BUET Branch, Palashi</b><br/>
+        City: <b>Dhaka</b><br/>
+        Country: <b>BANGLADESH</b><br/>
+        Bank Email: <b>brbuet@sonalibank.com.bd</b><br/>
+        Bank Phone: <b>880-2-9660514</b><br/>
     </p>
 
     <p class="h6"><b>The Pay Order or Deman Draft must be in favour of "ICECE, A/C No. 4404033008616, Sonali Bank Ltd.,

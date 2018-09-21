@@ -11,7 +11,7 @@
             <div class="">Choose your registration category*</div>
 
             <div class="form-group">
-                <input name="r_category" type="radio" value="International Authors/Participants"/>&nbsp;&nbsp;International
+                <input name="r_category" type="radio" value="International Authors/Participants" required/>&nbsp;&nbsp;International
                 Authors/Participants
                 <br/> <input name="r_category" type="radio" value="International Students"/>&nbsp;&nbsp;International
                 Students
@@ -32,7 +32,7 @@
 
             <div class="row-fluid form-group" id="iee_m_id">
                 <div class="">IEEE Membership ID (only for Members)</div>
-                <div class=""><input name="membership_id" type="text" class="form-control"/></div>
+                <div class=""><input name="membership_id" id="ieee_id" type="text" class="form-control"/></div>
             </div>
             
             <div class="row-fluid form-group">
@@ -321,13 +321,13 @@
                 <div class="">Upload your payment proof. Clear image file/.pdf file is acceptable. If you have multiple
                     files, upload it as a compressed(.zip/.rar) file.
                 </div>
-                <div class=""><input  type="file" id="file" name="file"/>
-                    <p class="alert alert-warning">allowed file types zip, rar, pdf, jpeg, jpg</p>
+                <div class=""><input class="btn"  type="file" id="file" name="file"/>
+                    <p class="alert h6 alert-warning">allowed file types: .zip, .rar, .pdf, .jpeg, .jpg</p>
                 </div>
             </div>
 
             <div class="row-fluid form-group">
-                <button name="submit" type="submit" class="btn btn-default">Submit</button>
+                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
             </div>
 
     </form>
@@ -340,17 +340,21 @@
     $("#file_upload").hide();
     $("input[name=iee_m]").click(function () {
         if ($("input[name=iee_m]:checked").val() == "N") {
-            $("#iee_m_id").hide();
+            $("#iee_m_id").slideUp();
+            $("#ieee_id").removeAttr("required");
         } else if ($("input[name=iee_m]:checked").val() == "Y") {
-            $("#iee_m_id").show();
+            $("#iee_m_id").slideDown();
+            $("#ieee_id").attr("required","required");
         }
     });
 
     $("input[name=pay_m]").click(function () {
         if ($("input[name=pay_m]:checked").val() == "Online") {
-            $("#file_upload").hide();
+            $("#file_upload").slideUp();
+            $("#file").removeAttr("required");
         } else if ($("input[name=pay_m]:checked").val() == "Offline") {
-            $("#file_upload").show();
+            $("#file_upload").slideDown();
+            $("#file").attr("required","required");
         }
     });
 
