@@ -1,3 +1,4 @@
+<p class=""><h4>For every participant, the following information is needed to be filled up the form</h4></p>
 <div>
     <form action="insert.php" method="post" enctype="multipart/form-data">
 

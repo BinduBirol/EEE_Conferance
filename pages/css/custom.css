@@ -1,0 +1,52 @@
+body{
+    font-family: 'Open Sans', serif;
+    padding-top: 54px;
+    background-color: #fdebd0;
+    /*color: black;*/
+
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 0;
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+{
+    font-family: 'Saira Extra Condensed', serif;
+    font-weight: 700;
+    color: #00580f;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 5.5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+.h6{
+    font-family: 'Saira Extra Condensed', serif;
+    font-weight: bold;
+    color: #40223c;
+}
+
+.subheading {
+
+    font-weight: bold;
+    font-family: 'Saira Extra Condensed', serif;
+    font-size: 1.35rem;
+}
+.image{
+    width: 75%;
+    height:90%;
+}

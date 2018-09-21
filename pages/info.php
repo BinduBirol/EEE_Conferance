@@ -1,5 +1,10 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+</head>
+
 <div class="">
-    <p class="pull-left">Registration Fees</p>
+    <p class="subheading pull-left">
+    <h3>Registration Fees</h3></p>
     <br/>
     <table class="table table-bordered table-hover">
         <tr>
@@ -35,7 +40,7 @@
     </table>
 </div>
 
-<div>
+<div class="h6">
     <p>* Category is defined by the author's affiliation mentioned in the paper.</p>
     <p>* This amount must be deposited against each of the registration. All expenses related to the transfer of
         registration fees should be borne by the authors/participants.</p>
@@ -43,15 +48,17 @@
 
 </div>
 <br/>
-<div>
-    *Local participants can deposit Registration Fees in BDT (amount shown is without bank charge).
+<div class="alert alert-info">
+    <b>* Local participants can deposit Registration Fees in BDT (amount shown is without bank charge).
     This payment may be made directly to the ‘ICECE’s bank account (4404033008616) with Sonali Bank Limited,
     BUET Branch, Dhaka (in all the acceptable formats of the bank, namely cash deposit, any branch electronic deposit,
     DD, TT, PO, etc.). For detail, please see below the ‘Offline Mode of Payment’ under ‘Mode of Payment’ sub-title.
+    </b>
 </div>
 <br/>
 <div>
-    <p>Special Notes:</p>
+    <p>
+    <h3>Special Notes:</h3></p>
     <ul>
         <li>Registration fee include conference kit, conference proceedings, admission to all technical sessions,
             refreshments, two lunches, and conference banquet.
@@ -65,7 +72,7 @@
 
 <div>
     <p>
-        Instructions for Registration
+    <h3>Instructions for Registration</h3>
     </p>
     <ul>
         <li>Prior to online registration you must have to complete IEEE Electronic Copyright Form for each paper and
@@ -73,7 +80,7 @@
         </li>
         <li>Please check different categories of registration and determine the category suitable for you.</li>
         <li>Select suitable mode of payment, complete the payment and collect necessary payment receipt.</li>
-        <li>During Online Registration you need to attach scanned copy of Supporting Documents.</li>
+        <li>During Online Registration you need to attach scanned copy of <b>Supporting Documents</b>.</li>
         <li>Proof of category of registration (e.g., full-time studentship status, IEEE membership, copy of photo ID (if
             necessary for identifying the country of the registered participant (e.g. institutional/organizational ID or
             identification page(s) of passport)
@@ -84,8 +91,9 @@
     </ul>
 </div>
 <div>
-    <p>Mode of Payment</p>
-    <p>Online Mode of Payment (using the ‘APPLY NOW’ button):</p>
+    <p>
+    <h3>Mode of Payment</h3></p>
+    <p class="subheading"><h4>Online Mode of Payment (using the ‘APPLY NOW’ button):</h4></p>
     <p> Debit/Credit Cards, Mobile Banking, e-Fund Transfer (for local and international)</p>
     <ul>
         <li>VISA</li>
@@ -98,28 +106,31 @@
         <li>Rocket</li>
         <li>My Cash</li>
         <li>& many more conventional and e-banking channels (please see the icons below)
-            <img src="images\payWith.png"></img>
+            <img class="image" src="images\payWith.png"></img>
         </li>
     </ul>
-    <p>***These services are available through an online service provider, so the receiver’s (organizer) bank account or
+    <p class="h6 alert alert-warning">***These services are available through an online service provider, so the
+        receiver’s (organizer) bank account or
         destination mobile number will not be required.</p>
 </div>
 <br/>
 <div>
-    <p>Offline Mode of Payment:</p>
-    <p> Convention Banking (for locals and international)</p>
+    <p>
+    <h3>Offline Mode of Payment:</h3></p>
+    <p class=""> <h4>Convention Banking (for locals and international)</h4></p>
     <ul>
         <li>Cash Deposit (physical or any branch electronic deposit)</li>
         <li>Pay Order</li>
         <li>Demand Draft (DD)/Telephonic Transfer (TT)</li>
         <li>Wired Transfer</li>
     </ul>
-    <p>**For offline payment, the registration fee MUST be paid to the following Bank Account:</p>
-    <p>
+    <p class=""><b>For offline payment, the registration fee MUST be paid to the following Bank Account:</b></p>
+    <p class="alert">
         Name of the Account: ICECE<br/>
         Bank Account or IBAN #: 4404033008616<br/>
         Bank ABA Number: 200270522<br/>
         SWIFT Code: BSONBDDHWEB<br/>
+        <br/>
         Name of the Bank: Sonali Bank Limited<br/>
         Name of the Branch/Address: BUET Branch, Palashi<br/>
         City: Dhaka<br/>
@@ -127,10 +138,11 @@
         Bank Email: brbuet@sonalibank.com.bd<br/>
         Bank Phone: 880-2-9660514<br/>
     </p>
-    <br/>
-    <p> The Pay Order or Deman Draft must be in favour of "ICECE, A/C No. 4404033008616, Sonali Bank Ltd., BUET
-        Branch, Dhaka, BANGLADESH" and should be sent by EMS/Registered Courier addressed to "Chair, Organizing
-        Committee, ICECE 2018, Department of EEE, BUET, Dhaka-1205, BANGLADESH".</p>
+
+    <p class="h6"><b>The Pay Order or Deman Draft must be in favour of "ICECE, A/C No. 4404033008616, Sonali Bank Ltd.,
+            BUET
+            Branch, Dhaka, BANGLADESH" and should be sent by EMS/Registered Courier addressed to "Chair, Organizing
+            Committee, ICECE 2018, Department of EEE, BUET, Dhaka-1205, BANGLADESH".</b></p>
 </div>
 
 

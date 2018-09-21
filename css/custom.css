@@ -1,9 +1,0 @@
-input[type=text],input[type=email] ,select[name=country] {
-    width:75%;
-}
-
-body{
-    padding: 5%;
-    //font-family: "Times New Roman";
-}
-
