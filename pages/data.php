@@ -1,3 +1,4 @@
+
 <?php
 include('connection.php');
 
@@ -11,7 +12,7 @@ while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
     //echo $row['NAME'].'<br/>';
     require("fpdf/fpdf.php");
 
-    $pdf = new FPDF('P','mm','A4');
+    $pdf = new FPDF('P', 'mm', 'A4');
     $pdf->AddPage();
     $image1 = "images/ictp-logo.png";
     /*
@@ -40,6 +41,13 @@ while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
     $pdf->SetFont("Courier", "B", 12);
     $pdf->Cell(0, 8, $row['category'], 0, 1, 'L');
 
+    if(!($row['ieee_membership_id']==null)){
+        $pdf->SetFont("Times", "", 12);
+        $pdf->Cell(40, 8, "Ieee membership id:", 0, 0, 'L');
+        $pdf->SetFont("Courier", "B", 12);
+        $pdf->Cell(0, 8, $row['ieee_membership_id'], 0, 1, 'L');
+    }
+
     $pdf->SetFont("Times", "", 12);
     $pdf->Cell(40, 8, "Address:", 0, 0, 'L');
     $pdf->SetFont("Courier", "B", 12);
@@ -65,10 +73,14 @@ while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
     $pdf->SetFont("Courier", "B", 12);
     $pdf->Cell(0, 8, $row['payment_method'], 0, 1, 'L');
 
-    $pdf->SetFont("Times", "", 12);
-    $pdf->Cell(40, 8, "Uploaded file name:", 0, 0, 'L');
-    $pdf->SetFont("Courier", 'B', 12);
-    $pdf->Cell(0, 8, $row['uploaded_file_name'], 0, 1, 'L');
+
+    if ($row['payment_method'] == 'Offline') {
+        $pdf->SetFont("Times", "", 12);
+        $pdf->Cell(40, 8, "Uploaded file name:", 0, 0, 'L');
+        $pdf->SetFont("Courier", 'B', 12);
+        $pdf->Cell(0, 8, $row['uploaded_file_name'], 0, 1, 'L');
+    }
+
 
     $pdf->SetFont("Times", "", 12);
     $pdf->Cell(40, 80, "", 0, 10, 'L');
@@ -78,7 +90,10 @@ while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
     $pdf->Cell(40, 8, "Executed time: " . $date, 0, 1, 'L');
 
 
-    $pdf->output('D',$email.'.pdf');
-
+    $pdf->output('D', $email . '.pdf');
 }
 ?>
+
+
+
+
