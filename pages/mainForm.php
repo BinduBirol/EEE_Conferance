@@ -1,6 +1,6 @@
 <p class=""><h4>For every participant, the following information is needed to be filled up the form</h4></p>
 <div>
-    <form action="insert.php" method="post" enctype="multipart/form-data">
+    <form id="registration_form" action="insert.php" method="post" enctype="multipart/form-data">
 
         <div class="form-group row-fluid">
             <div class="">Name*</div>
@@ -11,13 +11,13 @@
             <div class="">Choose your registration category*</div>
 
             <div class="form-group">
-                <input name="r_category" type="radio" value="International Authors/Participants" required/>&nbsp;&nbsp;International
+                <input name="r_category" type="radio" value="I1" required/>&nbsp;&nbsp;International
                 Authors/Participants
-                <br/> <input name="r_category" type="radio" value="International Students"/>&nbsp;&nbsp;International
+                <br/> <input name="r_category" type="radio" value="I2"/>&nbsp;&nbsp;International
                 Students
-                 <br/><input name="r_category" type="radio" value="Local Authors"/>&nbsp;&nbsp;Local Authors
-                 <br/><input name="r_category" type="radio" value="Local Students"/>&nbsp;&nbsp;Local Students
-                 <br/><input name="r_category" type="radio" value="Local Participants"/>&nbsp;&nbsp;Local Participants
+                <br/><input name="r_category" type="radio" value="L1"/>&nbsp;&nbsp;Local Authors
+                <br/><input name="r_category" type="radio" value="L2"/>&nbsp;&nbsp;Local Students
+                <br/><input name="r_category" type="radio" value="L3"/>&nbsp;&nbsp;Local Participants
             </div>
 
             <div class="row-fluid form-group">
@@ -34,25 +34,25 @@
                 <div class="">IEEE Membership ID (only for Members)</div>
                 <div class=""><input name="membership_id" id="ieee_id" type="text" class="form-control"/></div>
             </div>
-            
+
             <div class="row-fluid form-group">
                 <div class="">Affiliation (as mentioned in the paper)/ Institution *</div>
                 <div class=""><input required name="institution" type="text" class="form-control"/></div>
             </div>
-            
+
             <div class="row-fluid form-group">
                 <div class="">E-Mail*</div>
-                <div class=""><input required name="email" type="email" class="form-control"/></div>
+                <div class=""><input required name="email" id="email" type="email" class="form-control"/></div>
             </div>
-            
+
             <div class="row-fluid form-group">
                 <div class="">Phone with country code *</div>
                 <div class=""><input required name="phone" type="text" class="form-control"/></div>
             </div>
-            
+
             <div class="row-fluid form-group">
                 <div class="">Country *</div>
-                <div class=""><select name="country"  class="form-control" required>
+                <div class=""><select name="country" class="form-control" required>
                         <option value="">Country...</option>
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -312,7 +312,7 @@
 
             <div class="row-fluid form-group">
                 <div class="">Payment Method*</div>
-                <div class=""><input name="pay_m" type="radio" value="Online" checked="checked"/>&nbsp;Online &nbsp;&nbsp;
+                <div class=""><input name="pay_m" type="radio" value="Online" required/>&nbsp;Online &nbsp;&nbsp;
                     <input name="pay_m" type="radio" value="Offline"/>&nbsp;Offline
                 </div>
             </div>
@@ -321,13 +321,13 @@
                 <div class="">Upload your payment proof. Clear image file/.pdf file is acceptable. If you have multiple
                     files, upload it as a compressed(.zip/.rar) file.
                 </div>
-                <div class=""><input class="btn"  type="file" id="file" name="file"/>
+                <div class=""><input class="btn" type="file" id="file" name="file"/>
                     <p class="alert h6 alert-warning">allowed file types: .zip, .rar, .pdf, .jpeg, .jpg</p>
                 </div>
             </div>
 
             <div class="row-fluid form-group">
-                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                <button id="submit_btn" name="submit" type="submit" class="btn btn-primary">Submit</button>
             </div>
 
     </form>
@@ -344,7 +344,7 @@
             $("#ieee_id").removeAttr("required");
         } else if ($("input[name=iee_m]:checked").val() == "Y") {
             $("#iee_m_id").slideDown();
-            $("#ieee_id").attr("required","required");
+            $("#ieee_id").attr("required", "required");
         }
     });
 
@@ -352,10 +352,40 @@
         if ($("input[name=pay_m]:checked").val() == "Online") {
             $("#file_upload").slideUp();
             $("#file").removeAttr("required");
+            //$("#registration_form").attr("action","pages/payment/payment.php")
+            $("#submit_btn").html("Pay now");
         } else if ($("input[name=pay_m]:checked").val() == "Offline") {
             $("#file_upload").slideDown();
-            $("#file").attr("required","required");
+            $("#file").attr("required", "required");
+            $("#submit_btn").html("Submit");
         }
     });
+/*
+    $("#email").change(function () {
+
+        $email = $("#email").val();
+        $url= "email_validation.php";
+
+
+        $.ajax({
+            url: $url,
+           // data: {'status': status},
+            type: 'POST',
+            data: { "email": $email},
+            cache: false,
+            dataType: "json",
+            success: function (data) {
+                for (var i=0;i<data.length;++i)
+                {
+                    alert();
+                }
+            },
+            error: function (status) {
+                alert(status);
+            }
+        });
+
+
+    });*/
 
 </script>

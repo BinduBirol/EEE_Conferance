@@ -5,7 +5,7 @@
     <h3>Registration Fees</h3></p>
     <br/>
     <table class="table table-bordered table-hover">
-        <tr style="background-color: #fdebd0 ">
+        <tr style="background-color:   #f5faf5  ">
             <th>Category</th>
             <th>Fee*(General)</th>
             <th>Fee*(With IEEE Membership)</th>

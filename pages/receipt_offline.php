@@ -3,10 +3,14 @@
 include('connection.php');
 
 $email = $_GET['email'];
+$member_status= $_GET['m_status'];
 $date = date("D M d, Y G:i");
 
 
-$sqlget = "SELECT * FROM registration WHERE EMAIL='" . $email . "'";
+//$sqlget = "SELECT * FROM registration WHERE EMAIL='" . $email . "'";
+
+$sqlget = "SELECT registration.*, mst_category.name as c_name FROM registration, mst_category WHERE mst_category.id=registration.category and mst_category.membership= membership_status and email= '".$email."'";
+
 $sqldata = mysqli_query($conn, $sqlget) or die('ERROR!!');
 while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
     //echo $row['NAME'].'<br/>';
@@ -39,7 +43,7 @@ while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
     $pdf->SetFont("Times", "", 12);
     $pdf->Cell(40, 8, "Category:", 0, 0, 'L');
     $pdf->SetFont("Courier", "B", 12);
-    $pdf->Cell(0, 8, $row['category'], 0, 1, 'L');
+    $pdf->Cell(0, 8, $row['c_name'], 0, 1, 'L');
 
     if(!($row['ieee_membership_id']==null)){
         $pdf->SetFont("Times", "", 12);
@@ -93,7 +97,3 @@ while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
     $pdf->output('D', $email . '.pdf');
 }
 ?>
-
-
-
-
