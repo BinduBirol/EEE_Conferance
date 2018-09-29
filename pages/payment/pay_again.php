@@ -7,8 +7,16 @@ $trans_id = $_GET['tran_id'];
 
 
 $post_data = array();
+/*
+$post_data['store_id'] = "icece001live";
+$post_data['store_passwd'] = "5B842B818F50968076";
+$direct_api_url= "https://securepay.sslcommerz.com/gwprocess/v3/api.php";
+*/
+
 $post_data['store_id'] = "test_icece001test";
 $post_data['store_passwd'] = "test_icece001test@ssl";
+$direct_api_url = "https://sandbox.sslcommerz.com/gwprocess/v3/api.php";
+
 $post_data['total_amount'] = $am_amount;
 $post_data['currency'] = $am_currency;
 $post_data['tran_id'] = $trans_id;
@@ -46,7 +54,7 @@ while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
 
 
 # REQUEST SEND TO SSLCOMMERZ
-    $direct_api_url = "https://sandbox.sslcommerz.com/gwprocess/v3/api.php";
+    //$direct_api_url = "https://sandbox.sslcommerz.com/gwprocess/v3/api.php";
 
     $handle = curl_init();
     curl_setopt($handle, CURLOPT_URL, $direct_api_url);
@@ -81,7 +89,7 @@ while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
         # header("Location: ". $sslcz['GatewayPageURL']);
         exit;
     } else {
-        echo "JSON Data parsing error!";
+        echo "JSON Data parsing error!".$sslcz['GatewayPageURL'];
     }
 
 # REQUEST SEND TO SSLCOMMERZ
@@ -120,7 +128,7 @@ while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
         # header("Location: ". $sslcz['GatewayPageURL']);
         exit;
     } else {
-        echo "JSON Data parsing error!";
+        echo "JSON Data parsing error!".$sslcz['GatewayPageURL'];
     }
 }
 ?>

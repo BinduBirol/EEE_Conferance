@@ -30,7 +30,7 @@ $sql2= "INSERT INTO tran_info(trans_id, val_id, bank_tran_id, amount,card_issuer
 
 if ($conn->query($sql) === TRUE) {
     $conn->query($sql2);
-    echo "<h2><p style='text-align: center' class='alert alert-danger'>Your payement was failed!!</p></h2><br/> <a href='../pay_again.php?amount=$amount&currency=$currency&tran_id=$tran_id'>Go for payment one more time</a> <a href='../../../RegistrationForm.php'>Try again</a>";
+    echo "<h2><p style='text-align: center' class='alert alert-danger'>Your payment was failed!!</p></h2><br/> &nbsp;&nbsp;&nbsp; <a class='pull-right' href='../../../RegistrationForm.php'><button class='btn btn-danger'>Cancel</button></a><a class='pull-right' href='../pay_again.php?amount=$amount&currency=$currency&tran_id=$tran_id'><button class='btn btn-link'>Go for payment one more time</button></a> &nbsp;&nbsp;&nbsp; ";
 } else {
     echo "Error updating record: " . $conn->error;
 }

@@ -14,7 +14,7 @@ include "pages/email_validation.php";
 
 
 if (isset($_POST['submit'])) {
-    
+
     if ($response == "Y") {
 
         include "pages/connection.php";
@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
             }
         }
     }else{
-        echo "<script>alert('There is another registration found with this similar Information!!!');window.location.replace('RegistrationForm.php');// window.open('RegistrationForm.php');</script>";
+        echo "<script>alert('There is another registration found with this similar Information!!!');window.location.replace('RegistrationForm.php');</script>";
     }
 }
 ?>
